@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".PatientState">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="135dp"
+                android:text="나의 건강수치"
+                android:textSize="30sp"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:onClick="OnClickHandler"
+                android:textColor="@color/white"
+                android:background="@drawable/zzin_button"
+                android:text="조회하기" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/title_line"
+            android:layout_below="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:background="#d7d7d7" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/text_box"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/border_round"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/heart_rate"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="심박수치 :"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/heart_value"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/heart_rate"
+                android:gravity="center"
+                android:text="?"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/heart_state"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/heart_value"
+                android:gravity="center"
+                android:text="상태"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="865px"
+                android:layout_height="3px"
+                android:layout_below="@id/heart_rate"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="35dp"
+                android:background="#d7d7d7" />
+
+            <TextView
+                android:id="@+id/oxygen"
+                android:layout_width="180dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/heart_rate"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:text="혈중 산소포화도 :"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/oxygen_value"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/heart_value"
+                android:layout_marginTop="70dp"
+                android:layout_toRightOf="@+id/oxygen"
+                android:gravity="center"
+                android:text="?"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/oxygen_state"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/heart_state"
+                android:layout_marginTop="70dp"
+                android:layout_toRightOf="@+id/oxygen_value"
+                android:gravity="center"
+                android:text="상태"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="865px"
+                android:layout_height="3px"
+                android:layout_below="@id/oxygen_value"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="35dp"
+                android:background="#d7d7d7" />
+
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/oxygen_value"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:text="체온 :"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/temp_value"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/oxygen_value"
+                android:layout_marginTop="70dp"
+                android:layout_toRightOf="@+id/temp"
+                android:gravity="center"
+                android:text="?"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/temp_state"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/oxygen_state"
+                android:layout_marginTop="70dp"
+                android:layout_toRightOf="@+id/temp_value"
+                android:gravity="center"
+                android:text="상태"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="0dp"
+            android:background="#d7d7d7" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

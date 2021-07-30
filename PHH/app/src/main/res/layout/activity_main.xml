@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="PHH"
+            android:textColor="@color/phh"
+            android:textSize="100sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="500"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp">
+                //환자 이름과 병원 이름 부분
+                //환자 이름 데이터를 다음 화면에 넘겨준다.(intent로)
+                <TextView
+                    android:id="@+id/input1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="환자"
+                    android:layout_marginLeft="18dp"
+                    android:textSize="30sp"></TextView>
+                <EditText
+                    android:id="@+id/patient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:hint="이름을 입력하세요."
+                    android:inputType="text"
+                    android:paddingLeft="7dp"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginBottom="40dp">
+                //보호자 이름 입력 부분, 보호자 이름을 다음 레이아웃에 넘긴다
+                <TextView
+                    android:id="@+id/input2"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="보호자"
+                    android:textSize="30sp"></TextView>
+                <EditText
+                    android:id="@+id/guard"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:hint="이름을 입력하세요."
+                    android:inputType="text"
+                    android:paddingLeft="7dp"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        //확인 버튼을 누르면, 병원/환자/보호자를 선택하는 버튼이 나오고, 선택한 곳으로 페이지가 전환됨
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="확인"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@color/BASIC"
+            android:textColor="@color/zzin">
+        </Button>
+    </LinearLayout>
+</LinearLayout>
